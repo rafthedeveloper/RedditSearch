@@ -20,7 +20,7 @@ var bindListener = function(){
     var input = $(event.currentTarget).find("#search-value").val();
 
 
-    $.getJSON( "http://www.reddit.com/search.json?q=" + input + "?type=link?sort=top", function( results ) {
+    $.getJSON( "http://www.reddit.com/search.json?q=" + input + "?type=link", function( results ) {
       parseResults(results);
     });
   });
