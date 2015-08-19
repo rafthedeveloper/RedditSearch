@@ -1,0 +1,57 @@
+header{
+  background:#c0392b;
+  text-align:center;
+}
+
+h1{
+  color:#fff;
+  padding:20px 0px;
+  font-size:24px;
+}
+
+.search-form{
+  width:400px;
+  margin:0 auto;
+  margin-top:40px;
+}
+
+input[type="search"]{
+  width:100%;
+  padding:20px;
+  border:1px solid #c0392b;
+  border-radius:50px;
+}
+
+.search-results{
+  padding: 0px 20px;
+  margin-top:40px;
+}
+
+.search-results li{
+  margin-bottom:40px;
+  padding:10px;
+  border:1px solid #c0392b;
+}
+
+.search-results li h3{
+  margin-bottom:20px;
+}
+
+a{
+  color:#c0392b;
+}
+
+a:hover{
+  text-decoration:underline;
+}
+
+.search-results li small{
+  text-transform:lowercase;
+  font-size:14px;
+  font-variant:small-caps;
+  background:#c0392b;
+  border-radius:10px;
+  padding:5px 10px;
+  color:#fff;
+  letter-spacing: 1px;
+}

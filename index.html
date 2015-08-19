@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Reddit Search</title>
+    <script src="lib/jquery-1.11.3.min.js"></script>
+    <script src="lib/underscore-min.js"></script>
+    <script src="js/reddit-search.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Reddit Quick Search</h1>
+    </header>
+
+    <form id="reddit-search-form" class="search-form">
+      <input id="search-value" name="search" type="search" placeholder="What are you looking for?">
+    </form>
+
+  </body>
+
+  <script>
+    $(document).ready(function() {
+      bindListener();
+    });
+  </script>
+
+  <script type="text/template" class="template">
+    <ul class="search-results">
+      <% _.each ( searchResults, function( searchResult ) { %>
+        <li>
+          <h3>
+            <a href=" <%= searchResult.data.url %>">
+              <%= searchResult.data.title %>
+            </a>
+          </h3>
+          <small class="subreddit"> subreddit: <%= searchResult.data.subreddit %> </small>
+        </li>
+
+      <% }); %>
+    </ul>
+  </script>
+</html>
